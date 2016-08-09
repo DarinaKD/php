@@ -1,0 +1,68 @@
+<?php ob_start(); header("Content-Type: text/html; charset=utf-8");?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href='css/style.css'>
+  <title>Рецепты</title>
+  </head>
+  <body>
+  <div class="layout">
+  <div class="header">
+	<div class="header_left"> 
+  		<ul id="navbar">
+			<?=require_once "menu.php";?>
+		<!--<li><a href="#">Закуски</a></li>
+			<li><a href="#">Салаты</a></li> 
+			<li><a href="#">Блюда из мяса</a>
+			  <ul>
+			  <li><a href="#">Блюда из курицы</a></li>
+			  <li><a href="#">Блюда из говядины</a></li>
+			  <li><a href="#">Блюда из свинины</a></li>
+			  </ul>
+			  </li>
+			<li><a href="#">Блюда из рыбы</a></li>
+			<li><a href="#">Выпечка</a></li>
+			<li><a href="#">Торты</a></li> 
+			<li><a href="#">Напитки</a></li>-->
+		</ul>
+	</div>
+	<div class="auth">
+	<form class="form_auth">
+    <div>
+          <input type="text" name="login" id="login" placeholder="Логин">
+    </div>
+    <div>
+            <input type="password" name="password" id="password" placeholder="Пароль">
+    </div>
+    <div>
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Запомнить</label>
+        <input type="submit" name="doGo" value="Вход">
+		<script> console.log(10 * (false ? 2 : 3)); </script>
+    </div>     
+   </form>
+    </div>
+  </div>
+
+	<div class="sidebar">
+		<ul>
+			<li>Закуски</li> <li>Салаты</li> <li>Блюда из мяса</li> <li>Блюда из рыбы</li> <li>Выпечка</li> <li>Торты</li> <li>Напитки</li>
+		</ul>
+	</div>
+	<div class="content">
+	<h3>Подбор продуктов</h3>
+	<?=require_once "editCategory.php";?>
+	</div>
+	<div class="footer">
+	<div class="footer_ref">
+	<a href = "guestbook.php">Главная</a>
+	</div>
+	<div class="count">
+	</div>
+	</div> 
+  </div>
+ </body>
+</html>
+<?php ob_end_flush();?>
